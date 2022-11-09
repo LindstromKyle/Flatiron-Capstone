@@ -4,11 +4,11 @@
 Training computer vision networks to detect simple hand signals and complex motions 
 
 
-![](./Images/image1.jpeg)
-![](./Images/image2.jpeg)
-![](./Images/image3.jpeg)
-![](./Images/image4.jpeg)
-![](./Images/image5.jpeg)
+![](./Images/image1.png)
+![](./Images/image2.png)
+![](./Images/image3.png)
+![](./Images/image4.png)
+![](./Images/image5.png)
 ![](./Images/Action.gif)
 ![](./Images/Object_Detection.gif)
 
