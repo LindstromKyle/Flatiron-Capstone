@@ -2,7 +2,6 @@
 
 Training computer vision networks to detect simple hand signals and complex motions 
 
-![](./Images/image1.png)
 ![](./Images/image2.png)
 ![](./Images/image4.png)
 ![](./Images/image5.png)
@@ -27,7 +26,12 @@ First, the still frames: I used the OpenCV python library to collect 120 unique 
 
 
 
-and I collected 240 unique 30-frame videos of myself performing the gestures for 
+Next, I again used OpenCV to collect 240 unique 30-frame videos of myself performing ASL gestures. These videos are split into 4 categories: ‘Hello’, ‘Nice to meet you’, ‘Thank you’, and ‘Goodbye’. However, the classification task this time is different— instead of identifying and boxing an object in a single image, the gesture needs to be tracked through all 30 frames in order to make a detection. For this task, I used a python library called MediaPipe, which marks ‘keypoints’ in each image to track your face, arms, and hands. These same keypoints are given coordinates in each of the 30 frames in a sequence, and thus the positioning and movement of your body can be followed. An example of this process is shown in *Figure 2*:
+
+![](./Images/image1.png)
+
+> *Figure 2: One frame of a video in which MediaPipe has labeled the keypoints on my face, arms, and hands.* 
+
 
 This dataset was published in 2018 and consists of around 6,000 chest x-rays taken of children ages 1 through 5. These were taken at the Guangzhou Women and Children's Medical Center and collected, cleaned, and published by researchers at UC San Diego. The labels for the images were verified separately by 3 medical experts. Examples from this dataset are shown below in *Figure 1*:
 
