@@ -21,7 +21,7 @@ First, the still frames: I used the OpenCV python library to collect 120 unique 
 
 ![](./Images/image2.png)
 
-> *Figure 1: Here, boxes have been drawn around the two instances of ‘Peace’ I’m holding up, and the label has been assigned to each. *
+> *Figure 1: Here, boxes have been drawn around the two instances of ‘Peace’ I’m holding up, and the label has been assigned to each.*
 
 
 
