@@ -3,7 +3,7 @@
 Training computer vision networks to detect simple hand signals and complex motions 
 
 ![](./Images/image1.png)
-![](./Images/image3.png)
+![](./Images/image2.png)
 ![](./Images/image4.png)
 ![](./Images/image5.png)
 ![](./Images/Action.gif)
@@ -19,7 +19,7 @@ For this project, I decided to create my own dataset of images and videos to tra
 
 First, the still frames: I used the OpenCV python library to collect 120 unique images of myself holding up the international signs for thumbs up, thumbs down, and peace— 40 instances of each. In order to annotate these images, I employed another python library called LabelImg to manually box the symbols and apply the correct training labels. One example of this process is shown in *Figure 1*:
 
-![](./Images/image2.png)
+![](./Images/image3.png)
 
 > *Figure 1: Here, boxes have been drawn around the two instances of ‘Peace’ I’m holding up, and the label has been assigned to each.*
 
