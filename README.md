@@ -1,27 +1,33 @@
 # Using Object Detection Algorithms to Identify and Translate American Sign Language
 
-
 Training computer vision networks to detect simple hand signals and complex motions 
 
-
 ![](./Images/image1.png)
-![](./Images/image2.png)
 ![](./Images/image3.png)
 ![](./Images/image4.png)
 ![](./Images/image5.png)
 ![](./Images/Action.gif)
 ![](./Images/Object_Detection.gif)
 
-## Old work to be replaced below:
-
 ## **Introduction**
 
+There are currently close to 1 million people across the United States and Canada that use sign language as their primary form of communication. However, less than 1% of the population in each country understands sign language, which can make interactions for the deaf or hard of hearing difficult. This project's focus will be to address this issue with computer vision and machine learning. My hypothetical stakeholder in this context will be the Google Translate team— they would like to expand their tool in order to incorporate the translation of live action sign language gestures. I’ll be photographing and recording myself performing various ASL actions, and training deep neural networks to detect, track, and translate my symbols and gestures.
 
-Pneumonia is the single deadliest disease for children across the planet. This is especially true in developing nations in Southeast Asia and Sub-Saharan Africa, where many countries are dealing with a shortage of available doctors. Our client, the American Red Cross, is interested in easing the burden on medical professionals in these environments by developing new tools to identify pneumonia and flag children who are most at risk. They have asked us to train a model that is able classify the presence of pneumonia in a dataset of pediatric x-rays. These model predictions can then be verified by medical specialists and the children can be treated accordingly. 
+## **Data Collection and Labeling**
+
+For this project, I decided to create my own dataset of images and videos to train my models with. This dataset will be split into two sections— a set of still frame photos where to goal will be to identify and box the hand symbol that appears on screen, and a set of videos (30 frames each) with the goal of identifying the gesture being performed and writing the translated English equivalent to screen. 
+
+First, the still frames: I used the OpenCV python library to collect 120 unique images of myself holding up the international signs for thumbs up, thumbs down, and peace— 40 instances of each. In order to annotate these images, I employed another python library called LabelImg to manually box the symbols and apply the correct training labels. One example of this process is shown in *Figure 1*:
+
+![](./Images/image2.png)
+
+> *Figure 1: Here, boxes have been drawn around the two instances of ‘Peace’ I’m holding up, and the label has been assigned to each. *
 
 
-## **Exploratory Data Analysis**
 
+
+
+and I collected 240 unique 30-frame videos of myself performing the gestures for 
 
 This dataset was published in 2018 and consists of around 6,000 chest x-rays taken of children ages 1 through 5. These were taken at the Guangzhou Women and Children's Medical Center and collected, cleaned, and published by researchers at UC San Diego. The labels for the images were verified separately by 3 medical experts. Examples from this dataset are shown below in *Figure 1*:
 
@@ -99,4 +105,3 @@ We find that our convolutional neural network provides the optimal predictive po
 [Non Technical Presentation](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/Non%20Technical%20Presentation.pdf)  
 
 [Original Dataset](https://data.mendeley.com/datasets/rscbjbr9sj/2)
-
