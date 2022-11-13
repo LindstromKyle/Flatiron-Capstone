@@ -1,12 +1,8 @@
+![](./Images/image6.png)
+
 # Using Object Detection Algorithms to Identify and Translate American Sign Language
 
 Training computer vision networks to detect simple hand signals and complex motions 
-
-![](./Images/image2.png)
-![](./Images/image4.png)
-![](./Images/image5.png)
-![](./Images/Action.gif)
-![](./Images/Object_Detection.gif)
 
 ## **Introduction**
 
@@ -20,11 +16,7 @@ First, the still frames: I used the OpenCV python library to collect 120 unique 
 
 ![](./Images/image3.png)
 
-> *Figure 1: Here, boxes have been drawn around the two instances of ‘Peace’ I’m holding up, and the label has been assigned to each.*
-
-
-
-
+> *Figure 1: Here, boxes have been drawn around the two instances of ‘Thumbs Down’ I’m holding up, and the label has been assigned to each.*
 
 Next, I again used OpenCV to collect 240 unique 30-frame videos of myself performing ASL gestures. These videos are split into 4 categories: ‘Hello’, ‘Nice to meet you’, ‘Thank you’, and ‘Goodbye’. However, the classification task this time is different— instead of identifying and boxing an object in a single image, the gesture needs to be tracked through all 30 frames in order to make a detection. For this task, I used a python library called MediaPipe, which marks ‘keypoints’ in each image to track your face, arms, and hands. These same keypoints are given coordinates in each of the 30 frames in a sequence, and thus the positioning and movement of your body can be followed. An example of this process is shown in *Figure 2*:
 
@@ -32,11 +24,15 @@ Next, I again used OpenCV to collect 240 unique 30-frame videos of myself perfor
 
 > *Figure 2: One frame of a video in which MediaPipe has labeled the keypoints on my face, arms, and hands.* 
 
+In total, my final dataset consisted of 120 images and 240 videos
 
-This dataset was published in 2018 and consists of around 6,000 chest x-rays taken of children ages 1 through 5. These were taken at the Guangzhou Women and Children's Medical Center and collected, cleaned, and published by researchers at UC San Diego. The labels for the images were verified separately by 3 medical experts. Examples from this dataset are shown below in *Figure 1*:
+![](./Images/image2.png)
+![](./Images/image4.png)
+![](./Images/image5.png)
+![](./Images/Action.gif)
+![](./Images/Object_Detection.gif)
 
 
-![](./images/image2.png)
 
 
 > *Figure 1*
@@ -48,7 +44,6 @@ This dataset was published in 2018 and consists of around 6,000 chest x-rays tak
 Because of the limited size of this dataset, and the fact that machine learning models thrive on more data, we decided to use augmentation to increase the number of training examples available to our model. Images we flipped horizontallly and rotated by a random angle of ± 20 degrees. These augmentations are shown in *Figure 2*:
 
 
-![](./images/image3.png)
 
 
 > *Figure 2*
@@ -73,8 +68,6 @@ Our second performance metric is accuracy- a measure of how many of our model's 
 
 We fit many different models to our data in order to find the most effective solution. *Figure 3* below shows a table of the performance metrics of various models. 
 
-![](./images/image4.png)
-
 > *Figure 3*
 
 All models performed exceedingly well in regards to recall, but where the convolutional neural network shines is in its overall accuracy. This is important in reducing those false positives, and thus it is the model we chose to pursue for this problem.
@@ -83,11 +76,9 @@ All models performed exceedingly well in regards to recall, but where the convol
 
 Our final model architecture consisted of an Xception model pretrained on the ImageNet dataset, with custom pooling and output layers specific to our binary classification problem. *Figure 4* shows our chosen metrics' evolution by training epoch and *Figure 5* shows the confusion matrix for this model's performance on our test data set:
 
-![](./images/image5.png)
 
 > *Figure 4*
 
-![](./images/image6.png)
 
 > *Figure 5*
 
@@ -109,3 +100,4 @@ We find that our convolutional neural network provides the optimal predictive po
 [Non Technical Presentation](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/Non%20Technical%20Presentation.pdf)  
 
 [Original Dataset](https://data.mendeley.com/datasets/rscbjbr9sj/2)
+
