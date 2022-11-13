@@ -1,8 +1,8 @@
-![](./Images/image6.png)
-
 # Using Object Detection Algorithms to Identify and Translate American Sign Language
 
 Training computer vision networks to detect simple hand signals and complex motions 
+
+![](./Images/image6.png)
 
 ## **Introduction**
 
@@ -100,4 +100,3 @@ We find that our convolutional neural network provides the optimal predictive po
 [Non Technical Presentation](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/Non%20Technical%20Presentation.pdf)  
 
 [Original Dataset](https://data.mendeley.com/datasets/rscbjbr9sj/2)
-
