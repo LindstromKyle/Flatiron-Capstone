@@ -80,8 +80,8 @@ I believe these models indeed demonstrate the capability of neural networks to i
 
 [Action Gesture Jupyter Notebook](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/Action/Action.ipynb)  
 
-[Non Technical Presentation](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/Non%20Technical%20Presentation.pptx)  
+[Non Technical Presentation](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/Presentation/Non%20Technical%20Presentation.pdf)  
 
-[Non Technical Presentation (In PPT Form for Video Playback)](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/Non%20Technical%20Presentation.pptx)  
+[Non Technical Presentation (In PPT Form for Video Playback)](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/Presentation/Non%20Technical%20Presentation.pptx)  
 
 
