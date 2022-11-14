@@ -32,7 +32,7 @@ Next, I again used OpenCV to collect 240 unique 30-frame videos of myself perfor
 
 ### **Single Frame Detections**
 
-For this task, I used the SSD MobileNet V2 FPNLite 320x320 model architecture from the Tensorflow 2 Detection Model Zoo. The benefit of this model is its speed, averaging detections in 22 ms or less. This is important when you need to make many detections every second, as is the case in this project. The ultimate goal was to identify, box, and track symbols as you move them around in real time, and this architecture suits that need perfectly. *Figure 3* shows the training loss in intervals of 100 time steps, generated from TensorBoard logs:
+For this task, I used the SSD MobileNet V2 FPNLite 320x320 model architecture from the TensorFlow 2 Detection Model Zoo. The benefit of this model is its speed, averaging detections in 22 ms or less. This is important when you need to make many detections every second, as is the case in this project. The ultimate goal was to identify, box, and track symbols as you move them around in real time, and this architecture suits that need perfectly. *Figure 3* shows the training loss in intervals of 100 time steps, generated from TensorBoard logs:
 
 ![](./Images/image7.png)
 
@@ -70,14 +70,15 @@ And finally, this model was also used to detect live action gestures from my web
 
 > *Figure 8: Real time predictions of the model from my webcam, and the printed sentence translated directly on the screen*
 
-## **Conclusions & Recommendations**
+## **Conclusions**
 
-We find that our convolutional neural network provides the optimal predictive power for this business problem. We believbe this model will indeed help humanitarian aid workers use their valuable medical resources more efficiently. Doctors can be deployed where they are most needed, and the children in need of aid can be identified more quickly. We recommend this system not as a replacement for a medical professional's opinion, but as a supplement to these resources and a technique to help filter through what may currently be simply too much data. 
+I believe these models indeed demonstrate the capability of neural networks to identify, track, and translate live action sign language. Their predictive power is exceptional and their speed is sufficient for normal conversation. However, there are some limits to be aware of— First, every picture in my training dataset is of me. Second, they were all taken around the same time of day with similar lighting and backgrounds. While the models still performed well in my tests on other individuals and in different environments, to obtain a truly robust model the dataset should contain a wide variety of these parameters. Regardless, this project succeeds as a proof of concept and could be a valuable jumping off point for future iterations. Next steps may include adding a more comprehensive suite of ASL gestures and exploring the possibility of combining the two models into one. I’d also like to give thanks and credit to Nicholas Renotte, as several of his python scripts were adapted for this project. 
+
+## **Links**
 
 [Single Frame Jupyter Notebook](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/code/Draft_final.ipynb)  
 
 [Action Gesture Jupyter Notebook](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/code/Draft_final.ipynb)  
 
 [Non Technical Presentation](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/Non%20Technical%20Presentation.pdf)  
-
 
