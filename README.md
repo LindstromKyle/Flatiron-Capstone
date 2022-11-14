@@ -58,7 +58,7 @@ In order to detect more complex motions across the 30 frame videos, I used a seq
 
 > *Figure 6: Loss and accuracy of the model on the training and validations sets through 500 epochs*
 
-This model also performed well on unseen data, with an accuracy of 100%. The confusion matrix for the test data is shown in *Figure 7*:
+This model also performed well on unseen data, with an accuracy of 100% on 24 test instances. The confusion matrix for the test data is shown in *Figure 7*:
 
 ![](./Images/image5.png)
 
@@ -70,70 +70,14 @@ And finally, this model was also used to detect live action gestures from my web
 
 > *Figure 8: Real time predictions of the model from my webcam, and the printed sentence translated directly on the screen*
 
-
-
-> *Figure 1*
-
-
-## **Data Augmentation**
-
-
-Because of the limited size of this dataset, and the fact that machine learning models thrive on more data, we decided to use augmentation to increase the number of training examples available to our model. Images we flipped horizontallly and rotated by a random angle of ± 20 degrees. These augmentations are shown in *Figure 2*:
-
-
-
-
-> *Figure 2*
-
-
-## **Performance Metrics**
-
-
-In order to judge the performance of our model, we decided on two metrics:
-
-
-### **Recall**
-
-Our first performance metric is recall- a measure of our model's true positive rate. We would like our recall to be high, to maximize the probability that if someone truly has pneumonia, the model predicts this correctly and flags them for a medical follow-up.
-
-### **Accuracy**
-
-Our second performance metric is accuracy- a measure of how many of our model's predictions are correct in total. Simply predicting every child has pneumonia would result in a 100% recall score, which is obviously not helpful in this context. We want to maximize accuracy so that we avoid a large false positive rate that does not reduce the strain on medical staff who are already spread too thin. 
-
-
-## **Model Selection**
-
-We fit many different models to our data in order to find the most effective solution. *Figure 3* below shows a table of the performance metrics of various models. 
-
-> *Figure 3*
-
-All models performed exceedingly well in regards to recall, but where the convolutional neural network shines is in its overall accuracy. This is important in reducing those false positives, and thus it is the model we chose to pursue for this problem.
-
-## **Final Model**
-
-Our final model architecture consisted of an Xception model pretrained on the ImageNet dataset, with custom pooling and output layers specific to our binary classification problem. *Figure 4* shows our chosen metrics' evolution by training epoch and *Figure 5* shows the confusion matrix for this model's performance on our test data set:
-
-
-> *Figure 4*
-
-
-> *Figure 5*
-
-### **Final Recall Score**
-
-Out of 390 children in the test set with pneumonia, our model was able to recognize 389 of them, for a recall score of over 99%. This left only a single false negative, meaning our model is able to flag almost every child who truly has pneumonia for a follow up with a medical professional. 
-
-### **Final Accuracy**
-
-Out of 594 children in the test set total, our model correctly classified 545. This high accuracy is important for reducing our false positives and ensuring that valuable medical resources are budgeted correctly for those in need. 
-
-
 ## **Conclusions & Recommendations**
 
 We find that our convolutional neural network provides the optimal predictive power for this business problem. We believbe this model will indeed help humanitarian aid workers use their valuable medical resources more efficiently. Doctors can be deployed where they are most needed, and the children in need of aid can be identified more quickly. We recommend this system not as a replacement for a medical professional's opinion, but as a supplement to these resources and a technique to help filter through what may currently be simply too much data. 
 
-[Full Jupyter Notebook](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/code/Draft_final.ipynb)  
+[Single Frame Jupyter Notebook](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/code/Draft_final.ipynb)  
+
+[Action Gesture Jupyter Notebook](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/code/Draft_final.ipynb)  
 
 [Non Technical Presentation](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/Non%20Technical%20Presentation.pdf)  
 
-[Original Dataset](https://data.mendeley.com/datasets/rscbjbr9sj/2)
+
