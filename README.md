@@ -44,13 +44,31 @@ To evaluate the model’s performance on unseen data, it was fed images from the
 
 > *Figure 4: The model correctly detects and boxes these two unseen instances of ‘Peace’ that I am holding up*
 
+Finally, the model was put to the test on a live video feed of myself holding these symbols up, and moving them around the screen to demonstrate its ability to quickly track in real time. The results are shown in *Figure 5*:
 
-![](./Images/image2.png)
-![](./Images/image4.png)
-![](./Images/image5.png)
-![](./Images/Action.gif)
 ![](./Images/Object_Detection.gif)
 
+> *Figure 5: Real time predictions of the model from my webcam. It is able to make detections and track my hands around the screen with great accuracy*
+
+### **Action Gestures**
+
+In order to detect more complex motions across the 30 frame videos, I used a sequential Keras model with LSTM layers. While it may seem like a task with more input parameters than a still image, MediaPipe only stores the locations of each keypoint in the images rather than every individual pixel. This vastly reduces the number of inputs when compared to the 320x320 resolution photos being fed to the MobileNet. Because of this, the Keras sequential model will suffice and training speed is much higher. *Figure 6* shows the loss and accuracy of the model on the training and validation data across 500 epochs:
+
+![](./Images/image4.png)
+
+> *Figure 6: Loss and accuracy of the model on the training and validations sets through 500 epochs*
+
+This model also performed well on unseen data, with an accuracy of 100%. The confusion matrix for the test data is shown in *Figure 7*:
+
+![](./Images/image5.png)
+
+> *Figure 7: Confusion matrix for the 24 instances of test data split between 4 labels*
+
+And finally, this model was also used to detect live action gestures from my webcam and translate them in real time by printing the English equivalent to the screen. *Figure 8* shows a recording of this process:
+
+![](./Images/Action.gif)
+
+> *Figure 8: Real time predictions of the model from my webcam, and the printed sentence translated directly on the screen*
 
 
 
