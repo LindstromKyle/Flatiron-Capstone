@@ -28,7 +28,22 @@ Next, I again used OpenCV to collect 240 unique 30-frame videos of myself perfor
 
 > *Figure 2: One frame of a video in which MediaPipe has labeled the keypoints on my face, arms, and hands.* 
 
-In total, my final dataset consisted of 120 images and 240 videos
+## **Model Training**
+
+### **Single Frame Detections**
+
+For this task, I used the SSD MobileNet V2 FPNLite 320x320 model architecture from the Tensorflow 2 Detection Model Zoo. The benefit of this model is its speed, averaging detections in 22 ms or less. This is important when you need to make many detections every second, as is the case in this project. The ultimate goal was to identify, box, and track symbols as you move them around in real time, and this architecture suits that need perfectly. *Figure 3* shows the training loss in intervals of 100 time steps, generated from TensorBoard logs:
+
+![](./Images/image7.png)
+
+> *Figure 3: TensorBoard plot of the total loss as the model is trained through iteration 2,000*
+
+To evaluate the model’s performance on unseen data, it was fed images from the test set and its predictions were compared to the ground truth created from the labeling process. On a set of 24 images, the model was 100% accurate. One example of a correct prediction is shown in *Figure 4*:
+
+![](./Images/image2.png)
+
+> *Figure 4: The model correctly detects and boxes these two unseen instances of ‘Peace’ that I am holding up*
+
 
 ![](./Images/image2.png)
 ![](./Images/image4.png)
