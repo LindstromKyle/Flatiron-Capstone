@@ -76,9 +76,12 @@ I believe these models indeed demonstrate the capability of neural networks to i
 
 ## **Links**
 
-[Single Frame Jupyter Notebook](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/code/Draft_final.ipynb)  
+[Single Frame Jupyter Notebook](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/SingleFrame/Single_Frame.ipynb)  
 
-[Action Gesture Jupyter Notebook](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/code/Draft_final.ipynb)  
+[Action Gesture Jupyter Notebook](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/Action/Action.ipynb)  
 
-[Non Technical Presentation](https://github.com/hall-nicholas/flatiron-ds-project-4/blob/main/Non%20Technical%20Presentation.pdf)  
+[Non Technical Presentation](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/Non%20Technical%20Presentation.pptx)  
+
+[Non Technical Presentation (In PPT Form for Video Playback)](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/Non%20Technical%20Presentation.pptx)  
+
 
