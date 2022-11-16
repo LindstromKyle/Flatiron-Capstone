@@ -80,8 +80,8 @@ I believe these models indeed demonstrate the capability of neural networks to i
 
 [Single Frame Jupyter Notebook](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/SingleFrame/Single_Frame.ipynb)  
 
-[Non Technical Presentation](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/Presentation/Non%20Technical%20Presentation.pdf)  
+[Non Technical Presentation (For video playback check README)](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/Presentation/Non%20Technical%20Presentation.pdf)  
 
-[Non Technical Presentation (In PPT Form for Video Playback)](https://github.com/LindstromKyle/Flatiron-Capstone/blob/main/Presentation/Non%20Technical%20Presentation.pptx)  
+
 
 
